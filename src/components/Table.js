@@ -2,8 +2,15 @@ import React from 'react'
 import Table from 'react-bootstrap/Table';
 import UpdatePost from './UpdatePost'
 import { Button } from 'react-bootstrap'
+import styled from 'styled-components';
+const GridWrapper = styled.div`
+margin-top: 1em;
+margin-left: 6em;
+margin-right: 6em;
+`; 
 function Tablee({handleDelete, posts, handleUpdate}) {
   return (
+    <GridWrapper>
     <div>
          <Table striped bordered hover>
       <thead>
@@ -32,6 +39,7 @@ function Tablee({handleDelete, posts, handleUpdate}) {
       </tbody>
     </Table>
     </div>
+    </GridWrapper>
   )
 }
 
